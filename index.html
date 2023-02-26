@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="w-full bg-slate-100 fixed top-0 left-0 z-20 shadow-md ">
+      <div class="container w-[90%] mx-auto flex items-center justify-between py-4 text-2xl">
+        <p class="first-letter:text-2xl text-sm first-letter:text-emerald-600">Redwan</p>
+     <div class="flex items-center gap-5">
+      <ul class="flex gap-3">
+        <li class="cursor-pointer text-green-600">Home</li>
+        <li class="cursor-pointer text-green-600">About</li>
+        <li class="cursor-pointer text-green-600">Store</li>
+      </ul>
+
+       <p for="my-modal-3" id="cart" class="cursor-pointer">🛍</p>
+     </div>
+      </div>
+    </header>
+    <main>
+      <section class="py-[6rem] w-full h-screen">
+
+        <!-- ============= SEARCH BUTTON ========== -->
+        <div class="my-6 w-72 h-[3rem] mx-auto grid gap-1 grid-cols-[1fr_6rem] rounded-md">
+          <input id="input__field" class="w-full h-full input input-bordered input-success bg-green-100" type="text" placeholder="Search your phone">
+
+          <button id="search__btn" class="btn btn-success text-white">Search</button>
+        </div>
+
+        <div>
+          <button id="show__all" class="btn btn-success text-white mx-auto my-5 block hidden">Show All</button>
+        </div>
+        
+        <progress id="spinner" class="progress w-[8rem] mx-auto block hidden"></progress>
+
+        <p id="message" class="text-center text-3xl text-slate-700 my-4 hidden">No phone available please search again!!</p>
+<!-- =================== DISPLAY SEARCH RESULT ======================= -->
+        <div id="card__container" class="container mx-auto w-full h-screen  grid justify-center items-center gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+            
+          
+          
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- ================MODAL===================== -->
+
+   
+
+<input type="checkbox" id="my-modal-3" class="modal-toggle"/>
+<div class="modal">
+  <div class="modal-box relative text-center">
+    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+    <div class="mx-auto block w-[8rem]">
+      <img class="max-w-full" id="phone__thumb" src="" alt="">
+    </div>
+    <h3 id="phone__title" class="text-lg font-bold"></h3>
+
+    <div id="phone__subtitle" class="py-4"></div>
+  </div>
+</div>
+    <script src="./app.js"></script>
+  </body>
+</html>
